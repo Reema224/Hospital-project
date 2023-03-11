@@ -104,5 +104,10 @@ footer p {
     line-height: 1.5;
 }
 
+#hearder-img{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 
+}
 
