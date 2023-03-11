@@ -85,27 +85,27 @@ function signin() {
     let data = new FormData();
     data.append('email', email);
     data.append('password', password);
-    axios.post('http://localhost/Hospital-project/Backend/login.php', data).then(function (res) {
-        console.log(res.data)
-        
-    if (res.data.response== "logged in") {
-       
-    if(type==1){
+    axios.post('http://localhost/Hospital-project/Backend/login.php', data).then(function (result) {
+        console.log(result.data)
+        let get_type= result.data.type
+        console.log(get_type)
+
+    if (result.data.response== "logged in") {
+      alert("logged up successfully!");
+    if(get_type==1){
         window.location.href = "./html/admin.html";
-    }
-    else if(type==2){
+        
+    }else if(get_type==2){
          window.location.href = "./html/employee.html";
-    } else if(type==3){
+    } else if(get_type==3){
          window.location.href = "./html/patient.html";
     }
-
-    }else {
+    } else {
       alert("Make sure login information is correct");
     }
-    
-
-    }).catch(function (err) {
-        console.log(err);
-    })
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 
 }
