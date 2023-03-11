@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* background-color: #DCDCDC; */
+}
+.navbar{
+    background-color: rgb(50, 181, 50);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    text-shadow: 2px 2px 8px black;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    justify-content: center;
+    align-content: center;
+}
+.signup-fields, .login-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    width: 40%;
+    gap: 13px;
+    background-color: #ffffff;
+    border: 3px solid rgb(50, 181, 50);
+    color: rgb(50, 181, 50);
+    box-shadow: 2px 2px 8px rgb(50, 181, 50);
+    border-radius: 2%;
+
+}
+
+
+.field {
+    padding: 1rem;
+    width: 40%;
+    background-color: #DCDCDC;
+    border-radius: 5px;
+    border-style: hidden;
+}
+input:focus {
+    border: 3px solid rgb(50, 181, 50);
+    box-shadow: 0 0 3px rgb(50, 181, 50);
+    outline-offset: 0px;
+    outline: none;
+}
+select:focus{
+    border: 3px solid rgb(50, 181, 50);
+        box-shadow: 0 0 3px rgb(50, 181, 50);
+        outline-offset: 0px;
+        outline: none;
+}
+.form a {
+    display: flex;
+    justify-content: center;
+    color: rgb(50, 181, 50);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.form a:hover {
+    font-size: larger;
+}
+.all-btn {
+    width: fit-content;
+    align-content: center;
+    text-align: center;
+    border-radius: 5px;
+    border-style: hidden;
+    height: 2em;
+    font-size: 14px;
+    background-color: rgb(50, 181, 50);
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    line-height: 10px;
+}

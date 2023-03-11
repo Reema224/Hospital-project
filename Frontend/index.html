@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hospital</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+       <h1>Sunrise General Hospital</h1>
+    </nav>
+
+    <div class="form" id="Signup">
+        <div class="signup-fields">
+            <h1>Create Account</h1>
+            <div><input id="name_signup" class="field" type="text" placeholder="Name"></div>
+            <div><input id="email_signup" class="field" type="text" placeholder="Email"></div>
+            <div><input id="password_signup" class="field" type="password" placeholder="Password"></div>
+            <div><input id="date_signup" type="date" id="birthday" name="birthday" class="field"></div>
+            <div>
+                <select name="users" id="type_signup" class="field">
+                    <option value="1">Admin</option>
+                    <option value="2">Employee</option>
+                    <option value="3">Patient</option>
+                </select>
+            </div>
+            
+            <div><button id="btn_signup" class="all-btn">Register</button></div>
+            <div><a href="" id="linkLogin">Already have an account? Login</a></div>
+        </div></div>
+        
+        <div class="form" id="Login">
+        
+            <div class="login-fields">
+                <h1>Sign in</h1>
+                <div><input id="email_signin" class="field" type="text" placeholder="Email"></div>
+                <div><input id="password_signin" class="field" type="password" placeholder="Password"></div>
+                <div><button id="btn_login" class="all-btn">Login</button></div>
+                <div><a href="" id="linkSignup">Don't have an account? Create account</a></div>
+            </div>
+        
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.js"></script>
+        <script src="./js/register.js"></script>
+     
+</body>
+</html>
