@@ -10,7 +10,7 @@ async function loadHospitals() {
       dropdown.add(option);
     });
   } catch (error) {
-    console.error(error);
+    console.log(error);
   }
 }
 
