@@ -2,28 +2,29 @@
 include('connect.php');
 
 header('Access-Control-Allow-Origin:*');
-$name = $_POST['name'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$dob = $_POST['dob'];
-$type = $_POST['type'];
+$user_id = $_POST['user_id'];
+$hospital_id = $_POST['hospital_id'];
+$is_active = $_POST['is_active'];
+$date_joined = $_POST['date_joined'];
+$date_left= $_POST['date_left'];
 
-$check_email =  $conn->prepare('select email from users where email=?');
-$check_email->bind_param('s', $email);
-$check_email->execute();
-$check_email->store_result();
-$email_exists = $check_email->num_rows();
+$check_id =  $conn->prepare('select user_id from hospital_users where user_id=?');
+$check_id->bind_param('i', $user_id);
+$check_id->execute();
+$check_id->store_result();
+$id_exists = $check_id->num_rows();
 
-$hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-if ($email_exists > 0) {
+if ($id_exists > 0) {
     $response['status'] = "failed";
 } else {
-    $query =  $conn->prepare('insert into users(name,email,password,dob,type) values(?,?,?,?,?)');
-    $query->bind_param('ssssi', $name, $email, $hashed_password,$dob,$type);
-    $query->execute();
-    $response['status'] = "success";
-}
 
+$query =  $conn->prepare('insert into hospital_users(user_id,hospital_id,is_active,date_joined ,date_left) values(?,?,?,?,?)');
+$query->bind_param('iisss', $user_id, $hospital_id, $is_active,$date_joined,$date_left);
+$query->execute();
+$response['status'] = "success";
+
+}
 echo json_encode($response);
+
 ?>
