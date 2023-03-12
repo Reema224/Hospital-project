@@ -8,12 +8,31 @@ async function loadHospitals() {
       option.text = hospital.name;
       option.value = hospital.id;
       dropdown.add(option);
+
     });
+
   } catch (error) {
     console.log(error);
   }
 }
 
+async function loadHospitalsEmployee() {
+  try {
+    const response = await fetch('http://localhost/Hospital-project/Backend/hospital.php');
+    const hospitals = await response.json();
+    const dropdown = document.getElementById("hospital-employee-dropdown");
+    hospitals.forEach(hospital => {
+      const option = document.createElement("option");
+      option.text = hospital.name;
+      option.value = hospital.id;
+      dropdown.add(option);
+
+    });
+
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 async function loadDepartments() {
   const hospitalId = document.getElementById("hospital-dropdown").value;

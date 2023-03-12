@@ -4,7 +4,7 @@ body{
     /* background-color: #DCDCDC; */
 }
 .navbar{
-    background-color: rgb(50, 181, 50);
+    background-color: rgb(93, 181, 149);
     color: white;
     font-weight: bold;
     font-size: 1.1rem;
@@ -19,7 +19,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
    height: 3rem;
-    background-color: rgb(50, 181, 50);
+    background-color: rgb(93, 181, 149);
     padding: 30px;
     text-align: center;
     font-size: 16px;
@@ -27,13 +27,17 @@ body{
     margin-top: 23%;    
 }
 
-.form {
+.form, .form1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5%;
     justify-content: center;
     align-content: center;
+}
+.form1{
+    flex-direction: row;
+    font-weight: bold;
 }
 .signup-fields, .login-fields {
     display: flex;
@@ -44,9 +48,9 @@ body{
     width: 40%;
     gap: 13px;
     background-color: #ffffff;
-    border: 3px solid rgb(50, 181, 50);
-    color: rgb(50, 181, 50);
-    box-shadow: 2px 2px 8px rgb(50, 181, 50);
+    border: 3px solid rgb(93, 181, 149);
+    color: rgb(93, 181, 149);
+    box-shadow: 2px 2px 8px rgb(93, 181, 149);
     border-radius: 2%;
 
 }
@@ -59,22 +63,30 @@ body{
     border-radius: 5px;
     border-style: hidden;
 }
+.field1{
+    padding: 1rem;
+   
+        background-color: #DCDCDC;
+        border-radius: 5px;
+        border-style: hidden;
+    width: fit-content;
+}
 input:focus {
-    border: 3px solid rgb(50, 181, 50);
-    box-shadow: 0 0 3px rgb(50, 181, 50);
+    border: 3px solid rgb(93, 181, 149);
+    box-shadow: 0 0 3px rgb(93, 181, 149);
     outline-offset: 0px;
     outline: none;
 }
 select:focus{
-    border: 3px solid rgb(50, 181, 50);
-        box-shadow: 0 0 3px rgb(50, 181, 50);
+    border: 3px solid rgb(93, 181, 149);
+        box-shadow: 0 0 3px rgb(93, 181, 149);
         outline-offset: 0px;
         outline: none;
 }
 .form a {
     display: flex;
     justify-content: center;
-    color: rgb(50, 181, 50);
+    color: rgb(93,181,149);
     font-size: 1rem;
     font-weight: bold;
 }
@@ -90,7 +102,7 @@ select:focus{
     border-style: hidden;
     height: 2em;
     font-size: 14px;
-    background-color: rgb(50, 181, 50);
+    background-color: rgb(93, 181, 149);
     color: white;
     cursor: pointer;
     padding: 10px 20px;
@@ -111,3 +123,7 @@ footer p {
 
 }
 
+#admin-img{
+display: flex;
+justify-content: center;
+}
