@@ -55,3 +55,26 @@ async function loadDepartments() {
     console.log('Error:', error);
   }
 }
+
+async function loadRooms() {
+  const departmentId = document.getElementById("department-dropdown").value;
+  try {
+    const response = await fetch(`http://localhost/Hospital-project/Backend/room.php?department_id=${departmentId}`);
+    if (response.ok) {
+      const rooms = await response.json();
+      const dropdown = document.getElementById("room-dropdown");
+      dropdown.innerHTML = "";
+      rooms.forEach(room => {
+        const option = document.createElement("option");
+        option.text = room.number;
+        option.value = room.id;
+        dropdown.add(option);
+        console.log(option)
+      });
+    } else {
+      console.log('Error: ' + response.status);
+    }
+  } catch (error) {
+    console.log('Error:', error);
+  }
+}
