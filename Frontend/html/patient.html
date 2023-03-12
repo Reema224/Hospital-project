@@ -17,28 +17,36 @@
     </div>
 
 
-<body onload="loadHospitals()">
-    <label for="hospital-dropdown">Select a hospital:</label>
-    <select id="hospital-dropdown" onchange="loadDepartments()">
-        <option value="hospital">--select hospital</option>
-    </select>
+<body onload="loadHospitals(),loadMedications()">
+    <div class="form1">
+        <label for="hospital-dropdown">Select a hospital:</label>
+        <select class="field1" id="hospital-dropdown" onchange="loadDepartments()">
+            <option value="hospital">--select hospital</option>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <br><br>
+        <br><br>
 
-    <label for="department-dropdown">Select a department:</label>
-    <select id="department-dropdown" onchange="loadRooms()">
-        <option value="department">--select department</option>
-    </select>
-    </select><br><br>
+        <label for="department-dropdown">Select a department:</label>
+        <select class="field1" id="department-dropdown" onchange="loadRooms()">
+            <option value="department">--select department</option>
+        </select>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <label for="room-dropdown">Select a room:</label>
-    <select id="room-dropdown">
-        <option value="room">--select room</option>
-    </select>
-    </select><br><br>
+        <label for="room-dropdown">Select a room:</label>
+        <select class="field1" id="room-dropdown">
+            <option value="room">--select room</option>
+        </select>
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;
 
-
+    </div>
     
+    <div class="form1">
+                <label for="medication-dropdown">Select medication:</label>
+                <select class="field1" id="medication-dropdown">
+                    <option value="room">--select medication</option>
+                </select>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
 
     <footer class="footer">
         <div>

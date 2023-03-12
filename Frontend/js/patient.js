@@ -52,7 +52,7 @@ async function loadDepartments() {
       console.log('Error: ' + response.status);
     }
   } catch (error) {
-    console.log('Error:', error);
+    console.log('Error:',error);
   }
 }
 
@@ -68,6 +68,29 @@ async function loadRooms() {
         const option = document.createElement("option");
         option.text = room.number;
         option.value = room.id;
+        dropdown.add(option);
+        console.log(option)
+      });
+    } else {
+      console.log('Error: ' + response.status);
+    }
+  } catch (error) {
+    console.log('Error:', error);
+  }
+}
+
+async function loadMedications(){
+
+  try {
+    const response = await fetch(`http://localhost/Hospital-project/Backend/medication.php`);
+    if (response.ok) {
+      const medications = await response.json();
+      const dropdown = document.getElementById("medication-dropdown");
+      dropdown.innerHTML = "";
+      medications.forEach(medication => {
+        const option = document.createElement("option");
+        option.text = medication.name;
+        option.value = medication.id;
         dropdown.add(option);
         console.log(option)
       });

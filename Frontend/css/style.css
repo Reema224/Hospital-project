@@ -17,14 +17,15 @@ body{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-   height: 3rem;
+    justify-content: flex-end;
+   /* height: 3rem; */
     background-color: rgb(93, 181, 149);
     padding: 30px;
     text-align: center;
     font-size: 16px;
     color: #fff;
-    margin-top: 23%;    
+    margin-top: 7%; 
+
 }
 
 .form, .form1 {
