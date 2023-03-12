@@ -14,19 +14,7 @@
     
     <div><img src="../images/admin.PNG" alt="pic"></div>
     
-    <!-- <body onload="loadHospitals()">
-        <label for="hospital-dropdown">Select a hospital:</label>
-        <select id="hospital-dropdown" onchange="loadDepartments()">
-            <option value="hospital">--select hospital</option>
-        </select>
     
-        <br><br>
-    
-        <label for="department-dropdown">Select a department:</label>
-        <select id="department-dropdown">
-            <option value="department">--select department</option>
-        </select>
-        </select><br><br> -->
 
     <body onload="loadUsers(),loadHospitals()">
         <label for="user-dropdown">Select a patient:</label>
@@ -46,15 +34,16 @@
     <label for="active-dropdown">Select status (active or not)</label>
     <select id="isactive">
         <option>--select status</option>
-        <option value="yes">active</option>
-        <option value="no">not active</option>
+        <option value="yes">0</option>
+        <option value="no">1</option>
     </select>
     <br><br>
        <label for="date_join">date_joined</label>
-       <input type="date"><br><br>
+       <input id="date_join" type="date"><br><br>
     <label for="date_left">date_left</label>
-    <input type="date">
+    <input id="date_left" type="date"><br><br>
 
+    <button id="insert" class="all-btn ">insert</button>
         <footer class="footer">
             <div>
                 <p>123 Main St, Toronto, Phone: (555) 123-4567, Email: info@hospitalsunrise.com<br><br>© 2023 Sunrise
